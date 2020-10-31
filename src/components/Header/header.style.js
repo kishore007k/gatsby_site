@@ -8,6 +8,7 @@ const HeaderWrapper = styled.header`
   right: 0;
   background-color: rebeccapurple;
   height: 70px;
+  z-index: 2;
 
   .container {
     display: block;
