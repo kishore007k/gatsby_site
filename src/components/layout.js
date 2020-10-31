@@ -5,6 +5,7 @@ import Header from "./Header/header"
 import "./layout.css"
 
 import styled from "styled-components"
+import Footer from "./Footer/footer"
 
 const Wrapper = styled.div`
   max-width: 1140px;
@@ -31,6 +32,7 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
       </div>
+      <Footer />
     </Wrapper>
   )
 }

@@ -1,26 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "../image"
-import DesktopNavbar from "../DesktopNav/DesktopNavbar"
-import MobileNavbar from "../MobileNav/MobileNavbar"
-import useWindowsDimensions from "./useWindowDimensions"
-
-const HeaderWrapper = styled.header`
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rebeccapurple;
-  height: 70px;
-
-  .logo {
-    width: 60px;
-    height: auto;
-  }
-`
+import HeaderWrapper from "./header.style"
+import { AiOutlineMenuFold, AiOutlineClose } from "react-icons/ai"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -34,10 +17,20 @@ const Header = () => {
       }
     }
   `)
-  const { width } = useWindowsDimensions()
+  const [active, setActive] = useState(false)
+  const [Inactive, setInactive] = useState(true)
+  const toggleActive = () => {
+    if (active) {
+      setActive(false)
+      setInactive(true)
+    } else {
+      setActive(true)
+      setInactive(false)
+    }
+  }
   return (
     <HeaderWrapper>
-      <header>
+      <div className="container">
         <div>
           <h1 className="logo">
             <Link to="/">
@@ -45,8 +38,33 @@ const Header = () => {
             </Link>
           </h1>
         </div>
-        {width <= `960` ? <MobileNavbar /> : <DesktopNavbar />}
-      </header>
+        <div>
+          <button onClick={toggleActive} className="toggleBar">
+            {Inactive ? <AiOutlineMenuFold /> : <AiOutlineClose />}
+          </button>
+        </div>
+        <div className={active ? "closed" : "navBar"}>
+          <nav className="nav">
+            <ul className="navList">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/blogs">Blogs</Link>
+              </li>
+              <li>
+                <Link to="/projects">Projects</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </HeaderWrapper>
   )
 }
