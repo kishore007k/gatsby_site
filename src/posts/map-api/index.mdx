@@ -1,0 +1,81 @@
+---
+title: "Map API"
+subtitle: ""
+category: "API"
+thumbnail: ./mapApi.jpg
+description: "This helps you how to set up and use Google Map API in your Projects for free."
+date: 08/09/2020
+published: true
+---
+
+<p>
+  Using an already existing API to our advantage is far better and easier than
+  creating one from scratch.
+</p>
+
+<p>I have used this on my website and it is super easy and free.</p>{" "}
+
+---
+
+## How to get Google Map API🌎
+
+1. Go to the [Google Cloud Platform](https://console.cloud.google.com/google/maps-apis/new?project=portfolio-283012&folder=&organizationId=) Console.
+
+2. Click the project drop-down and select or create the project for which you want to add an API key.
+
+3. Click the menu button and select APIs & Services > Credentials.
+
+4. On the Credentials page, click Create credentials > API key.
+
+5. The API key created dialog displays your newly created API key.
+
+6. Click Close.
+
+7. The new API key is listed on the Credentials page under API keys. (Remember to [restrict the API](https://developers.google.com/maps/documentation/javascript/get-api-key#restrict_key) key before using it in production.)
+
+---
+
+### Add the API key to your request😉
+
+<p>
+  You must include an API key with every Maps JavaScript API request. In the
+  following example, replace YOUR_API_KEY with your API key.
+</p>
+
+```html
+<script
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+  type="text/javascript"
+></script>
+```
+
+---
+
+## Steps in Detail
+
+1. Go to ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/w0dkkjh2ybzxmsn548x7.jpg)
+
+2. Press the 'Get Started' button. In the window that opens, tick both 'Maps' and 'Places'. Press Continue. At this stage, you will be asked to create a Google account or log in to your existing one. ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/o2xhojhme5ohddu3ahxz.jpg)
+
+3. In the updated window, choose 'Select a project' and enter the project name (e.g. Set Compass) in the box below. Then click Next.
+   ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/hlp201kzxb7re69ebtgx.jpg)
+
+4. In the updated window, click Create Billing Account
+
+5. After clicking Next in Step 2, will be offered to enable your APIs. Press Next.
+
+6. You will see a new window with your API key in the box. Save the key to be able to use it and press Done. ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/hw2h9ewelc66bnq2i1ps.jpg)
+
+7.(Optional) To protect your API Key and prevent anyone else from using it, click on credentials in the left pane then click on the project name as shown below. ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/6iwper3hyay0784uhj5g.jpg)
+
+8.(Optional) From Application restrictions select HTTP referrers (Web sites), enter https://setcompass.com/* in the Accept requests from these HTTP referrers (Web sites). Then click Save. ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/zsbl34ogrk9bi4wip6ia.jpg)
+
+9.Finally go to the registration page at setcompass.com, fill in all the fields and paste your copied Google Maps API Key as shown below. ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/a339qnla9yk9bw57zcgz.jpg)
+
+---
+
+## Reference📚
+
+[Google API](https://developers.google.com/maps/documentation/javascript/get-api-key)

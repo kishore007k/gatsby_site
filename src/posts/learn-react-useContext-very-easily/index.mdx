@@ -1,0 +1,170 @@
+---
+title: "Learn React useContext very easily"
+subtitle: ""
+thumbnail: ./react_bg.png
+date: 10/24/2020
+category: "React"
+description: "Learning React hooks is a must & it becomes very simple by this method."
+published: true
+---
+
+## What is React Context?
+
+Imagine for a moment that you have a React app with a single parent component that contains many levels of child components inside of it.
+
+Now, imagine passing data from the uppermost component all the way down to the last child component.
+
+In React data is passed top-down from one component to another through props.
+
+You’d have to pass that data through each and every component, through their props, until you reach the last child component.
+
+That’s painstaking, tiresome, and prone to errors. 👎
+
+This is where Context comes to the rescue. 👏
+
+The React Context API allows you to easily access data at different levels of the component tree, without having to pass data down through props.
+
+## How Does the useContext Hook Work?
+
+The useContext Hook provides all the same functionality you’d expect from the Context API, just packaged up into a simple to use Hook that you can use inside functional components.
+
+Let's compare the difference between using the `Context` inside a `class component` and the `functional component`.
+
+#### Using the Class Component:-
+
+Create a file named `ClassContextComponent.js` and copy and paste the code.
+
+```jsx
+import React from "react"
+import { ThemeContext } from "./App"
+
+export default class ClassContextComponent extends Component {
+  themeStyles(dark) {
+    return {
+      backgroundColor: dark ? "#333" : "#ccc",
+      color: dark ? "#ccc" : "#333",
+      padding: "2rem",
+      margin: "2rem",
+    }
+  }
+
+  render() {
+    return (
+      <ThemeContext.Consumer>
+        {darkTheme => {
+          return <div style={this.themeStyles(darkTheme)}>Class Theme</div>
+        }}
+      </ThemeContext.Consumer>
+    )
+  }
+}
+```
+
+#### Using the Functional Component:-
+
+Create a `FunctionContextComponent.js` file and move the code.
+
+```jsx
+import React from "react"
+import { useTheme, useThemeUpdate } from "./ThemeContext"
+
+export default function FunctionContextComponent() {
+  const darkTheme = useTheme()
+  const toggleTheme = useThemeUpdate()
+  const themeStyles = {
+    backgroundColor: darkTheme ? "#333" : "#ccc",
+    color: darkTheme ? "#ccc" : "#333",
+    padding: "2rem",
+    margin: "2rem",
+  }
+  return (
+    <>
+      <button onClick={toggleTheme}>Toggle theme</button>
+      <div style={themeStyles}>Function Theme</div>
+    </>
+  )
+}
+```
+
+## Lets have an Example:-
+
+Create an `App.js` file and copy this code.
+
+```jsx
+import React, { useState } from "react"
+import FunctionContextComponent from "./FunctionContextComponent"
+import { ThemeProvider } from "./ThemeContext"
+
+const App = () => {
+  return (
+    <ThemeProvider>
+      <FunctionContextComponent />
+    </ThemeProvider>
+  )
+}
+
+export default App
+```
+
+Create a new file `ContextExample.js` and save it in the root directory.
+
+Everything inside the `<ThemeContext.Provider value={darkTheme}>` wrapper will have all the properties of `ThemeContext.Provider` without passing it as a `prop` for each Component.
+
+```jsx
+export const ThemeContext = React.createContext()
+```
+
+In this, we use the `createContext` to create `ThemeContext` and exports it. So that we can use it anywhere within our application.
+
+```jsx
+const [darkTheme, setDarkTheme] = useState(true)
+
+const toggleTheme = () => {
+  setDarkTheme(prevDarkTheme => !prevDarkTheme)
+}
+```
+
+This function toggles the `dark` and the `light` theme.
+
+Create a `themeProvider.js` file in the same directory od the `App.js` and copy the code.
+
+```js
+import React, { useContext, useState } from "react"
+
+const ThemeContext = React.createContext()
+const ThemeUpdateContext = React.createContext()
+
+export function useTheme() {
+  return useContext(ThemeContext)
+}
+
+export function useThemeUpdate() {
+  return useContext(ThemeUpdateContext)
+}
+
+export function ThemeProvider({ children }) {
+  const [darkTheme, setDarkTheme] = useState(true)
+
+  const toggleTheme = () => {
+    setDarkTheme(prevDarkTheme => !prevDarkTheme)
+  }
+
+  return (
+    <ThemeContext.Provider value={darkTheme}>
+      <ThemeUpdateContext.Provider value={toggleTheme}>
+        {children}
+      </ThemeUpdateContext.Provider>
+    </ThemeContext.Provider>
+  )
+}
+```
+
+In the `themeProvider.js` we created a custom hooks **`useTheme`** & **`useThemeUpdate`** to send the toggle function to the children. In this case the `FunctionContextComponenet` Component.
+
+The `useContext` is mainly used when we have to send the `prop` to a children which is way back. This is the basic use of the `useContext`.
+
+## Reference:-
+
+- [React Hooks](https://reactjs.org/docs/hooks-reference.html)
+- [Digital Ocean](https://www.digitalocean.com/community/tutorials/react-usecontext)
+- [Dave](https://daveceddia.com/usecontext-hook/)
