@@ -6,9 +6,10 @@ const HeaderWrapper = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  background-color: rebeccapurple;
+  background-color: #fdfdfd;
   height: 70px;
   z-index: 2;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 
   .container {
     display: block;
@@ -50,7 +51,7 @@ const HeaderWrapper = styled.header`
 
           a {
             text-decoration: none;
-            color: aliceblue;
+            color: #1090b8;
             font-size: 20px;
             padding: 5px;
             border: none;
@@ -59,8 +60,8 @@ const HeaderWrapper = styled.header`
             transition: 0.5s ease-in-out all;
 
             &:hover {
-              color: rebeccapurple;
-              background-color: aliceblue;
+              border-bottom: 2px solid rebeccapurple;
+              animation: grow 5s linear infinite;
             }
           }
         }

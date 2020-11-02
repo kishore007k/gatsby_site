@@ -6,13 +6,21 @@ import "./layout.css"
 
 import styled from "styled-components"
 import Footer from "./Footer/footer"
+import ParticlesEffect from "./ParticlesEffect/particlesEffect"
 
 const Wrapper = styled.div`
-  max-width: 1140px;
-  min-height: 100vh;
-  display: block;
-  padding-top: 100px;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #e8faff;
+
+  main {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    z-index: 1;
+  }
 `
 
 const Layout = ({ children }) => {
@@ -30,6 +38,7 @@ const Layout = ({ children }) => {
     <Wrapper>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
+        <ParticlesEffect />
         <main>{children}</main>
       </div>
       <Footer />

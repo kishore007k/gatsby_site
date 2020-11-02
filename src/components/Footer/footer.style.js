@@ -1,35 +1,31 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const RotationAnimation = keyframes`
+  transform:rotate(360deg)
+`
 
 const FooterWrapper = styled.footer`
   display: block;
-  position: absolute;
+  position: relative;
   bottom: 0;
   right: 0;
-  height: auto;
-  width: 100vw;
-  background-color: aliceblue;
+  height: max-content;
+  width: 100%;
+  background-color: #fdfdfd;
   text-align: center;
   z-index: 1;
 
   h3 {
-    color: #323232;
+    color: #1090b8;
     font-size: 20px;
     font-weight: 500;
   }
 
   span {
     color: crimson;
-    animation: RotationAnimation 4s linear infinite;
-
-    @keyframes RotationAnimation {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
+    animation-name: ${RotationAnimation};
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
   }
 
   strong {
@@ -39,11 +35,12 @@ const FooterWrapper = styled.footer`
   h4 {
     padding-top: 20px;
     font-size: 25px;
-    color: #323232;
+    color: #1090b8;
     font-weight: 400;
   }
 
   p {
+    color: #1090b8;
     padding-bottom: 10px;
   }
 `
