@@ -1,15 +1,20 @@
 import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #fdfdfd;
-  height: 70px;
-  z-index: 2;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  .header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 2;
+  }
+
+  .scrolled {
+    background-color: #fdfdfd;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
 
   .container {
     display: block;
@@ -19,9 +24,10 @@ const HeaderWrapper = styled.header`
   }
 
   .logo {
-    width: 60px;
+    width: 50px;
     height: auto;
     float: left;
+    padding-top: 10px;
     margin-left: 20px;
   }
 

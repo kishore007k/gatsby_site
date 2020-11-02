@@ -10,7 +10,6 @@ const Image = () => {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
-            src
           }
         }
       }

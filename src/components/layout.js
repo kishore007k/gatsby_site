@@ -6,7 +6,6 @@ import "./layout.css"
 
 import styled from "styled-components"
 import Footer from "./Footer/footer"
-import ParticlesEffect from "./ParticlesEffect/particlesEffect"
 
 const Wrapper = styled.div`
   width: 100%;
@@ -38,7 +37,6 @@ const Layout = ({ children }) => {
     <Wrapper>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
-        <ParticlesEffect />
         <main>{children}</main>
       </div>
       <Footer />

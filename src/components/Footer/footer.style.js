@@ -1,7 +1,8 @@
 import styled, { keyframes } from "styled-components"
 
 const RotationAnimation = keyframes`
-  transform:rotate(360deg)
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
 `
 
 const FooterWrapper = styled.footer`
@@ -23,9 +24,7 @@ const FooterWrapper = styled.footer`
 
   span {
     color: crimson;
-    animation-name: ${RotationAnimation};
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    animation: ${RotationAnimation} 5s linear infinite;
   }
 
   strong {

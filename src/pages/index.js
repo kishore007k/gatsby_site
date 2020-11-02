@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 
 import styled from "styled-components"
 import LandingPage from "../sections/LandingPage/LandingPage"
+import ParticlesEffect from "../components/ParticlesEffect/particlesEffect"
 
 const Wrapper = styled.div`
   h1 {
@@ -22,6 +23,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Wrapper>
+      <ParticlesEffect />
       <LandingPage />
     </Wrapper>
   </Layout>
