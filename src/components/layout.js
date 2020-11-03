@@ -10,7 +10,7 @@ import Footer from "./Footer/footer"
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #e8faff;
+  background-color: #f0fcff;
 
   main {
     display: block;

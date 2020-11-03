@@ -57,18 +57,13 @@ const HeaderWrapper = styled.header`
 
           a {
             text-decoration: none;
-            color: #1090b8;
+            color: lightseagreen;
             font-size: 20px;
             padding: 5px;
             border: none;
             border-radius: 5px;
             font-weight: 400;
             transition: 0.5s ease-in-out all;
-
-            &:hover {
-              border-bottom: 2px solid rebeccapurple;
-              animation: grow 5s linear infinite;
-            }
           }
         }
       }
@@ -87,8 +82,9 @@ const HeaderWrapper = styled.header`
       top: 10px;
       right: 10px;
       z-index: 100;
-      color: rebeccapurple;
-      background-color: aliceblue;
+      color: lightseagreen;
+      background-color: #f0fcff;
+      cursor: pointer;
     }
 
     .navBar {
@@ -100,7 +96,7 @@ const HeaderWrapper = styled.header`
       bottom: 0;
       height: 100vh;
       overflow: hidden;
-      background-color: aliceblue;
+      background-color: #f0fcff;
     }
 
     .closed {
@@ -112,7 +108,7 @@ const HeaderWrapper = styled.header`
       bottom: 0;
       height: 100vh;
       overflow: hidden;
-      background-color: aliceblue;
+      background-color: #f0fcff;
 
       .nav {
         display: flex;
@@ -133,7 +129,7 @@ const HeaderWrapper = styled.header`
             margin: 20px;
 
             a {
-              color: rebeccapurple;
+              color: lightseagreen;
               font-size: 40px;
               border: none;
               border-radius: 5px;
@@ -142,8 +138,8 @@ const HeaderWrapper = styled.header`
               transition: 0.5s ease-in-out all;
 
               &:hover {
-                color: aliceblue;
-                background-color: rebeccapurple;
+                color: #f0fcff;
+                background-color: lightseagreen;
               }
             }
           }

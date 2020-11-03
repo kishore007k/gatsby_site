@@ -17,7 +17,7 @@ const FooterWrapper = styled.footer`
   z-index: 1;
 
   h3 {
-    color: #1090b8;
+    color: lightseagreen;
     font-size: 20px;
     font-weight: 500;
   }
@@ -34,12 +34,12 @@ const FooterWrapper = styled.footer`
   h4 {
     padding-top: 20px;
     font-size: 25px;
-    color: #1090b8;
+    color: lightseagreen;
     font-weight: 400;
   }
 
   p {
-    color: #1090b8;
+    color: lightseagreen;
     padding-bottom: 10px;
   }
 `
