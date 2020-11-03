@@ -4,9 +4,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import styled from "styled-components"
-import LandingPage from "../sections/LandingPage/LandingPage"
+import LandingPage from "../sections/LandingSection/LandingPage"
 import ParticlesEffect from "../components/ParticlesEffect/particlesEffect"
-import AboutSection from "../sections/AboutPage/AboutSection"
+import AboutSection from "../sections/AboutSection/AboutSection"
+import SkillsSection from "../sections/SkillsSection/SkillsSection"
 
 const Wrapper = styled.div`
   max-width: 1140px;
@@ -31,6 +32,7 @@ const IndexPage = () => (
     <Wrapper>
       <LandingPage />
       <AboutSection />
+      <SkillsSection />
     </Wrapper>
   </Layout>
 )
