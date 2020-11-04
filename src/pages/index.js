@@ -8,6 +8,8 @@ import LandingPage from "../sections/LandingSection/LandingPage"
 import ParticlesEffect from "../components/ParticlesEffect/particlesEffect"
 import AboutSection from "../sections/AboutSection/AboutSection"
 import SkillsSection from "../sections/SkillsSection/SkillsSection"
+import OtherSkillsSection from "../sections/OtherSkillsSection/OtherSkillsSection"
+import BlogsSection from "../sections/BlogsSection/BlogsSection"
 
 const Wrapper = styled.div`
   max-width: 1140px;
@@ -33,6 +35,8 @@ const IndexPage = () => (
       <LandingPage />
       <AboutSection />
       <SkillsSection />
+      <OtherSkillsSection />
+      <BlogsSection />
     </Wrapper>
   </Layout>
 )

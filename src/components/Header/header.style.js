@@ -27,7 +27,7 @@ const HeaderWrapper = styled.header`
     width: 50px;
     height: auto;
     float: left;
-    padding-top: 10px;
+    padding-top: 8px;
     margin-left: 20px;
   }
 
@@ -78,13 +78,17 @@ const HeaderWrapper = styled.header`
       outline: none;
       border-radius: 50px;
       padding: 10px;
-      font-size: 30px;
+      font-size: 40px;
       top: 10px;
       right: 10px;
       z-index: 100;
       color: lightseagreen;
-      background-color: #f0fcff;
       cursor: pointer;
+      background-color: transparent;
+    }
+
+    .afterScroll {
+      background-color: #f0fcff;
     }
 
     .navBar {
