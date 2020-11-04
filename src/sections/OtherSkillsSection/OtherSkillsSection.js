@@ -14,7 +14,7 @@ const OtherSkillsSection = () => {
       <div className="mainContent">
         <div className="vsc">
           <img src={vsc} alt="Visual Studio Code" />
-          <h3>My favorite Code Editor</h3>
+          <h3>My favorite Text Editor</h3>
         </div>
         {/* <div>
           <div className="otherFeature">

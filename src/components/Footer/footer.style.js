@@ -12,7 +12,7 @@ const FooterWrapper = styled.footer`
   right: 0;
   height: max-content;
   width: 100%;
-  background-color: #fdfdfd;
+  background-color: #f7fdff;
   text-align: center;
   z-index: 1;
 
@@ -41,6 +41,7 @@ const FooterWrapper = styled.footer`
   p {
     color: lightseagreen;
     padding-bottom: 10px;
+    margin-bottom: 0px;
   }
 `
 

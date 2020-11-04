@@ -1,6 +1,13 @@
 import styled from "styled-components"
 
 const BlogsSectionWrapper = styled.section`
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: 40px auto;
+  }
+
   .sectionTitle {
     margin-top: 50px;
   }
@@ -40,13 +47,6 @@ const BlogsSectionWrapper = styled.section`
   .blogImageContainer {
     display: block;
     margin-bottom: 10px;
-  }
-
-  .blogs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    margin: 40px auto;
   }
 
   .cardContainer {
@@ -97,6 +97,26 @@ const BlogsSectionWrapper = styled.section`
         cursor: pointer;
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
       }
+    }
+  }
+
+  @media (max-width: 960px) {
+    .cardContainer {
+      margin: 40px 60px;
+    }
+
+    .card {
+      height: auto;
+    }
+
+    .blogs {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .cardContainer {
+      margin: 15px 30px;
     }
   }
 `

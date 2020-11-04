@@ -27,6 +27,12 @@ const AboutSectionWrapper = styled.section`
     height: auto;
   }
 
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .btnsContainer {
     display: flex;
     justify-content: center;

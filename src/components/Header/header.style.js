@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header`
   }
 
   .scrolled {
-    background-color: #fdfdfd;
+    background-color: #f7fdff;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   }
 
