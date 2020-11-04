@@ -41,7 +41,7 @@ const BlogsSection = () => {
         <div className="blogs">
           {data.allMdx.nodes.map(blog => {
             return (
-              <div className="cardContainer">
+              <div className="cardContainer" key={blog.id}>
                 <div className="card">
                   <Link to={`/blogs/${blog.slug}`}>
                     <div>

@@ -31,6 +31,13 @@ const HeaderWrapper = styled.header`
     margin-left: 20px;
   }
 
+  .afterScroll {
+    /* box-shadow: inset 2px 0px 10px rgba(227, 83, 149, 0.25),
+      inset 0px 1px 10px rgba(243, 98, 107, 0.25); */
+    filter: drop-shadow(0px 1px 5px rgba(245, 99, 102, 0.25));
+    /* drop-shadow(0px 1px 5px rgba(227, 83, 148, 0.25)); */
+  }
+
   .toggleBar {
     display: none;
   }
@@ -85,10 +92,6 @@ const HeaderWrapper = styled.header`
       color: lightseagreen;
       cursor: pointer;
       background-color: transparent;
-    }
-
-    .afterScroll {
-      background-color: #f0fcff;
     }
 
     .navBar {

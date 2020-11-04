@@ -42,7 +42,7 @@ const Header = () => {
       <div className={`header ${scroll ? "scrolled" : ""}`}>
         <div className="container">
           <div>
-            <h1 className="logo">
+            <h1 className={`logo ${scroll ? "afterScroll" : ""}`}>
               <Link to="/">
                 <Image fluid={data.file.publicURL} />
               </Link>
