@@ -12,7 +12,7 @@ import OtherSkillsSection from "../sections/OtherSkillsSection/OtherSkillsSectio
 import BlogsSection from "../sections/BlogsSection/BlogsSection"
 
 const Wrapper = styled.div`
-  max-width: 1140px;
+  max-width: 1300px;
   margin: auto;
   min-height: 100%;
 

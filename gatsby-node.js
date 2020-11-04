@@ -10,9 +10,6 @@ const path = require(`path`)
 const slugify = require("./src/components/utils/slugify")
 const { paginate } = require("gatsby-awesome-pagination")
 
-// Replacing '/' would result in empty string which is invalid
-const replacePath = path => (path === `/` ? path : path.replace(/\/$/, ``))
-
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(`src/templates/blogs.js`)
@@ -29,6 +26,7 @@ exports.createPages = async ({ actions, graphql }) => {
             description
             date
             category
+            published
             thumbnail {
               publicURL
               childImageSharp {
@@ -56,7 +54,7 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage,
     items: blogs,
     itemsPerPage: 8,
-    pathPrefix: `/blog`,
+    pathPrefix: `/blogs`,
     component: blogViewTemplate,
   })
 
@@ -70,13 +68,13 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 
-  const BlogTags = res.data.blogTags.group
+  const BlogTags = result.data.blogTags.group
   BlogTags.forEach(tag => {
     paginate({
       createPage,
       items: tag.nodes,
       itemsPerPage: 4,
-      pathPrefix: `/blog/tag/${slugify(tag.fieldValue)}`,
+      pathPrefix: `/blogs/tag/${slugify(tag.fieldValue)}`,
       component: blogListTemplate,
       context: {
         tag: tag.fieldValue,

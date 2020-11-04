@@ -2,45 +2,35 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-export const query = graphql`
-  query BlogPostByPath($slug: String!) {
-    mdx(slug: { eq: $slug }) {
-      body
-      excerpt
-      frontmatter {
-        title
-        subtitle
-        published
-        description
-        date
-        category
-        thumbnail {
-          childImageSharp {
-            fluid {
-              src
+const Blogs = () => {
+  const data = useStaticQuery(graphql`
+    query BlogPostByPath($slug: String!) {
+      mdx(slug: { eq: $slug }) {
+        body
+        excerpt
+        frontmatter {
+          title
+          subtitle
+          published
+          description
+          date
+          category
+          thumbnail {
+            childImageSharp {
+              fluid {
+                src
+              }
             }
           }
         }
       }
     }
-  }
-`
+  `)
 
-const Blogs = () => {
-  const {
-    mdx: {
-      body,
-      frontmatter: {
-        title,
-        subtitle,
-        description,
-        date,
-        subtitle,
-        category,
-        thumbnail,
-      },
-    },
-  } = useStaticQuery(query)
+  const blog = data.mdx
+
+  console.log(blog)
+
   return (
     <div>
       <Helmet title={`Your Blog Name - ${title}`} />
