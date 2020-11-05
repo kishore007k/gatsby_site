@@ -107,6 +107,7 @@ const AboutSectionWrapper = styled.section`
 
     .profilePicContainer {
       margin-right: 20px;
+      min-width: 200px;
     }
 
     .btnsContainer {

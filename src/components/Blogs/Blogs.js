@@ -43,30 +43,31 @@ const Blogs = () => {
         {blogs.map(blog => (
           <div key={blog.id} className="cardContainer">
             <div className="card">
-              <Link to={blog.slug}>
-                <div className="cardTitle">
-                  <h2>{blog.frontmatter.title}</h2>
+              <div className="cardTitle">
+                <h2>{blog.frontmatter.title}</h2>
+              </div>
+              <div className="blogImageContainer">
+                <div className="image">
+                  <Image
+                    fluid={blog.frontmatter.thumbnail.childImageSharp.fluid}
+                  />
                 </div>
-                <div className="blogImageContainer">
-                  <div className="image">
-                    <Image
-                      fluid={blog.frontmatter.thumbnail.childImageSharp.fluid}
-                    />
-                  </div>
-                </div>
-                <div className="cardDetails">
-                  <p>{blog.frontmatter.date}</p>
-                  <code>{blog.frontmatter.category}</code>
-                </div>
-                <div className="published">
-                  {blog.frontmatter.published ? (
-                    <p>Published</p>
-                  ) : (
-                    <p>upcoming...</p>
-                  )}
-                </div>
-                <div className="desc">{blog.frontmatter.description}</div>
-              </Link>
+              </div>
+              <div className="cardDetails">
+                <p>{blog.frontmatter.date}</p>
+                <code>{blog.frontmatter.category}</code>
+              </div>
+              <div className="published">
+                {blog.frontmatter.published ? (
+                  <p>Published</p>
+                ) : (
+                  <p>upcoming...</p>
+                )}
+                <Link to={blog.slug}>
+                  <p>Read More</p>
+                </Link>
+              </div>
+              <div className="desc">{blog.frontmatter.description}</div>
             </div>
           </div>
         ))}

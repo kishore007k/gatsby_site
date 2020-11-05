@@ -14,6 +14,7 @@ const FooterWrapper = styled.footer`
   width: 100%;
   background-color: #f7fdff;
   text-align: center;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.1);
   z-index: 1;
 
   h3 {

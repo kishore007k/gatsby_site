@@ -43,28 +43,31 @@ const BlogsSection = () => {
             return (
               <div className="cardContainer" key={blog.id}>
                 <div className="card">
-                  <Link to={`/blogs/${blog.slug}`}>
-                    <div>
-                      <h3 className="cardTitle">{blog.frontmatter.title}</h3>
-                      {blog.frontmatter.subtitle ? (
-                        <h5>{blog.frontmatter.subtitle}</h5>
-                      ) : (
-                        <></>
-                      )}
-                    </div>
-                    <div className="blogImageContainer">
+                  <div className="blogImageContainer">
+                    <div className="image">
                       <Image
                         fluid={blog.frontmatter.thumbnail.childImageSharp.fluid}
                       />
                     </div>
-                    <div className="cardDetails">
-                      <code>{blog.frontmatter.category}</code>
-                      <p>{blog.frontmatter.date}</p>
-                    </div>
-                    <div className="cardDesc">
-                      <p>{blog.frontmatter.description}</p>
-                    </div>
-                  </Link>
+                  </div>
+                  <div>
+                    <h3 className="cardTitle">{blog.frontmatter.title}</h3>
+                    {blog.frontmatter.subtitle ? (
+                      <h5>{blog.frontmatter.subtitle}</h5>
+                    ) : (
+                      <></>
+                    )}
+                  </div>
+                  <div className="cardDetails">
+                    <code>{blog.frontmatter.category}</code>
+                    <p>{blog.frontmatter.date}</p>
+                  </div>
+                  <div className="cardDesc">
+                    <p>{blog.frontmatter.description}</p>
+                  </div>
+                  <div className="readme">
+                    <Link to={`/blogs/${blog.slug}`}>Read More</Link>
+                  </div>
                 </div>
               </div>
             )
