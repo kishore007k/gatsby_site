@@ -566,3 +566,7 @@ tt,
     font-size: 100%;
   }
 }
+code {
+  border: none;
+  border-radius: 5px;
+}

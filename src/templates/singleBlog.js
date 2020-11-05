@@ -30,6 +30,26 @@ const Wrapper = styled.div`
     img {
       margin-top: 20px;
     }
+
+    pre {
+      code {
+        font-size: 18px;
+        font-weight: 300;
+        background-color: transparent;
+      }
+    }
+
+    strong {
+      code {
+        background-color: transparent;
+      }
+    }
+
+    code {
+      background-color: #ffb14a;
+      padding: 2px 5px;
+      font-weight: 600;
+    }
   }
 
   p {
@@ -74,6 +94,7 @@ const Wrapper = styled.div`
   }
 
   h1 {
+    color: lightseagreen;
     text-align: center;
   }
 
