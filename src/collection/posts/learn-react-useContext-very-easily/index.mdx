@@ -34,7 +34,7 @@ Let's compare the difference between using the `Context` inside a `class compone
 
 Create a file named `ClassContextComponent.js` and copy and paste the code.
 
-```jsx
+```javascript
 import React from "react"
 import { ThemeContext } from "./App"
 
@@ -64,7 +64,7 @@ export default class ClassContextComponent extends Component {
 
 Create a `FunctionContextComponent.js` file and move the code.
 
-```jsx
+```javascript
 import React from "react"
 import { useTheme, useThemeUpdate } from "./ThemeContext"
 
@@ -90,7 +90,7 @@ export default function FunctionContextComponent() {
 
 Create an `App.js` file and copy this code.
 
-```jsx
+```javascript
 import React, { useState } from "react"
 import FunctionContextComponent from "./FunctionContextComponent"
 import { ThemeProvider } from "./ThemeContext"
@@ -110,13 +110,13 @@ Create a new file `ContextExample.js` and save it in the root directory.
 
 Everything inside the `<ThemeContext.Provider value={darkTheme}>` wrapper will have all the properties of `ThemeContext.Provider` without passing it as a `prop` for each Component.
 
-```jsx
+```javascript
 export const ThemeContext = React.createContext()
 ```
 
 In this, we use the `createContext` to create `ThemeContext` and exports it. So that we can use it anywhere within our application.
 
-```jsx
+```javascript
 const [darkTheme, setDarkTheme] = useState(true)
 
 const toggleTheme = () => {
@@ -128,7 +128,7 @@ This function toggles the `dark` and the `light` theme.
 
 Create a `themeProvider.js` file in the same directory od the `App.js` and copy the code.
 
-```js
+```javascript
 import React, { useContext, useState } from "react"
 
 const ThemeContext = React.createContext()
