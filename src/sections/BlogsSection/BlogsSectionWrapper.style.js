@@ -12,6 +12,12 @@ const BlogsSectionWrapper = styled.section`
     margin-top: 50px;
   }
 
+  .title {
+    font-size: 40px;
+    font-weight: 700;
+    color: lightseagreen;
+  }
+
   .card {
     display: block;
     width: 100%;
@@ -36,12 +42,6 @@ const BlogsSectionWrapper = styled.section`
     font-size: 25px;
     font-weight: 500;
     padding-left: 10px;
-  }
-
-  .title {
-    font-size: 40px;
-    font-weight: 700;
-    color: lightseagreen;
   }
 
   .blogImageContainer {
