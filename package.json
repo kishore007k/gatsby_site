@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby_site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A Portfolio site for those creative Web Developers",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kishore Kumar <kishorekumarstar07@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.19",
     "@mdx-js/react": "^1.6.19",
@@ -28,6 +28,7 @@
     "react-icons": "^3.11.0",
     "react-particles-js": "^3.4.0",
     "react-typing-effect": "^2.0.4",
+    "react-vertical-timeline-component": "^3.3.1",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
@@ -48,9 +49,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/kishore007k/gatsby_site"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/kishore007k/gatsby_site/issues"
   }
 }

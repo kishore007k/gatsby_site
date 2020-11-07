@@ -10,11 +10,6 @@ const Header = () => {
     {
       file(relativePath: { eq: "logo.svg" }) {
         publicURL
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
     }
   `)
