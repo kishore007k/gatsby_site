@@ -12,30 +12,34 @@ const AboutPageWrapper = styled.section`
   .aboutSection {
     display: flex;
     width: 100%;
-    height: 500px;
+    height: max-content;
+    padding: 0px 10px;
   }
 
   .avatar {
     display: block;
     margin-right: 40px;
-    width: 600px;
-    height: 500px;
 
     img {
       display: block;
+      max-width: 300px;
       border: none;
       border-radius: 10px;
     }
   }
 
-  .devContainer {
-    display: flex;
-    align-items: center;
-  }
-
-  .devIcon {
+  .aboutDesc {
     display: block;
-    width: 40px;
+    width: 100%;
+    line-height: 30px;
+    letter-spacing: 2px;
+    padding-top: 30px;
+
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 400;
+    }
   }
 
   .image {
@@ -95,6 +99,26 @@ const AboutPageWrapper = styled.section`
         border-radius: 2px;
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
       }
+    }
+  }
+
+  @media (max-width: 1120px) {
+    .avatar {
+      margin-right: 20px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .aboutSection {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .avatar {
+      margin-right: 0px;
+      margin: auto;
     }
   }
 `
