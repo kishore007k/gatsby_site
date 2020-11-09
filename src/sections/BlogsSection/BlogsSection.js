@@ -9,6 +9,7 @@ const BlogsSection = () => {
       allMdx(
         filter: { frontmatter: { published: { eq: true } } }
         sort: { fields: frontmatter___date, order: DESC }
+        limit: 3
       ) {
         nodes {
           id

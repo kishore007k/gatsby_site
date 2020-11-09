@@ -1,49 +1,12 @@
 import React from "react"
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 import AboutPageWrapper from "./AboutPageWrapper.style"
-import { MdWork, MdSchool, MdStar } from "react-icons/md"
-import { useStaticQuery, graphql } from "gatsby"
+import TimeLineEffect from "./TimeLineEffect"
+import tree from "../../images/tree.png"
+import dev from "../../images/socialIcons/dev.svg"
+import avatar from "../../images/me.jpeg"
 
-const query = graphql`
-  {
-    github {
-      viewer {
-        name
-        login
-        location
-        bio
-        avatarUrl
-        company
-        email
-        twitterUsername
-        url
-        followers {
-          totalCount
-        }
-        following {
-          totalCount
-        }
-        gists {
-          totalCount
-        }
-        organization(login: "layer5io") {
-          avatarUrl
-          name
-          login
-          email
-          isVerified
-        }
-      }
-    }
-  }
-`
-
-const AboutPage = () => {
-  const data = useStaticQuery(query)
+const AboutPage = ({ data }) => {
   const {
     github: { viewer },
   } = data
@@ -52,119 +15,65 @@ const AboutPage = () => {
       <div>
         <h1 className="title">About Me</h1>
       </div>
-      <div>
-        <div>
-          <img src={viewer.avatarUrl} alt={viewer.name} />
+      <div className="aboutSection">
+        <div className="avatar">
+          <img src={avatar} alt="profilePic" />
         </div>
-        <div>
-          <p>{viewer.bio}</p>
+        <div className="aboutDesc">
+          I'm an engineering student currently pursuing my B.E. Degree. I
+          started coding in my second year of college. I have done some
+          Contributions during the last{" "}
+          <span>
+            <a href={tree}>Hacktoberfest</a>
+          </span>{" "}
+          and successfully completed the challenge within the time period. I
+          also participate in some coding challenges in the sites like{" "}
+          <span>
+            <a
+              href="https://www.hackerrank.com/kishorekumarsta1?hr_r=1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              HackerRank
+            </a>
+          </span>{" "}
+          and some other popular open ground challenges. I often write some
+          articles in the{" "}
+          <a href="https://dev.to/kishore007k" className="devContainer">
+            <img src={dev} alt="dev.io" className="devIcon" />
+            Dev.io
+          </a>
         </div>
       </div>
-      <VerticalTimeline>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-          date="2011 - present"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={<MdWork />}
-        >
-          <h3 className="vertical-timeline-element-title">Creative Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, Project
-            Management, Team Leading
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2010 - 2011"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={<MdWork />}
-        >
-          <h3 className="vertical-timeline-element-title">Art Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            San Francisco, CA
-          </h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online
-            Marketing
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2008 - 2010"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={<MdWork />}
-        >
-          <h3 className="vertical-timeline-element-title">Web Designer</h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            Los Angeles, CA
-          </h4>
-          <p>User Experience, Visual Design</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2006 - 2008"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          icon={<MdWork />}
-        >
-          <h3 className="vertical-timeline-element-title">Web Designer</h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            San Francisco, CA
-          </h4>
-          <p>User Experience, Visual Design</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="April 2013"
-          iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-          icon={<MdSchool />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Content Marketing for Web, Mobile and Social Media
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-          <p>Strategy, Social Media</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="November 2012"
-          iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-          icon={<MdSchool />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Agile Development Scrum Master
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-          <p>Creative Direction, User Experience, Visual Design</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2002 - 2006"
-          iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-          icon={<MdSchool />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Bachelor of Science in Interactive Digital Media Visual Imaging
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            Bachelor Degree
-          </h4>
-          <p>Creative Direction, Visual Design</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-          icon={<MdStar />}
+      <TimeLineEffect />
+      <div className="githubContainer">
+        <div className="github">
+          <div className="githubImage">
+            <img src={viewer.avatarUrl} alt={viewer.name} />
+          </div>
+          <div className="githubDetails">
+            <div className="githubBio">
+              <p>{viewer.bio}</p>
+            </div>
+            <div className="githubDesc">
+              <div>
+                <p>Followers: {viewer.followers.totalCount}</p>
+                <p>Following: {viewer.following.totalCount}</p>
+              </div>
+              <div>
+                <p>Gists: {viewer.gists.totalCount}</p>
+                <p>Repositories: {viewer.repositories.totalCount}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="https://grass-graph.moshimo.works/images/kishore007k.png?background=none"
+          alt="GitHub Contribution Graph"
+          className="image"
         />
-      </VerticalTimeline>
-      <br />
-      <br />
-      <img
-        src="https://grass-graph.moshimo.works/images/kishore007k.png?background=none"
-        alt="GitHub Contribution Graph"
-        className="image"
-      />
+      </div>
     </AboutPageWrapper>
   )
 }

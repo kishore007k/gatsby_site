@@ -37,14 +37,14 @@ const AboutSection = () => {
         </div>
         <div className="content">
           <p>
-            I'm an engineering student currently pursuing my B.E. Degree in the
-            <i> Mechanical Engineering</i>. I'm the kind of person who likes to
-            keep all people around him happy and joyful. I started coding in my
-            second year of the college. I have some experience on working with
-            some <span>frameworks</span> and
+            Hi!!, I'm KishoreKumar a.k.a <i>(kishore007k)</i>. I'm a fresher
+            with some experience. I also have experience on working with some{" "}
+            <span>frameworks</span> and
             <span> static site generators</span> like <code>Gatsby</code>
             <code> React</code> <code>Jekyll</code>. I'm looking forward to
-            collaborate with all kinds of designers, developers, etc.
+            collaborate with all kinds of designers, developers, etc. Its been a
+            while that I have been using <strong>GatsbyJS</strong> to create
+            static sites dynamically and I'm really enjoying using it.
           </p>
           <div className="btnsContainer">
             <p className="btn">
