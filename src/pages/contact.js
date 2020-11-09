@@ -1,12 +1,32 @@
 import React from "react"
+import ContactForm from "../components/Contact/ContactForm"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import styled from "styled-components"
+
+const H1 = styled.h1`
+  text-align: center;
+  margin-top: 200px;
+  color: lightseagreen;
+`
+
+const Wrapper = styled.div`
+  max-width: 1300px;
+  height: 53.5vh;
+  margin: auto;
+`
 
 const Contact = () => {
   return (
     <Layout>
       <SEO title="Contact" />
-      <div>This is the Contact Page</div>
+      <div>
+        <H1>Contact Me</H1>
+      </div>
+      <Wrapper>
+        <ContactForm />
+      </Wrapper>
     </Layout>
   )
 }
