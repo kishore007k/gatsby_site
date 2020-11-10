@@ -2,7 +2,6 @@ import React from "react"
 import Image from "gatsby-image"
 import LandingPageWrapper from "./LandingPageWrapper.style"
 import { useStaticQuery, graphql } from "gatsby"
-import ReactTypingEffect from "react-typing-effect"
 import github from "../../images/socialIcons/github.svg"
 import linkedIn from "../../images/socialIcons/linkedIn.svg"
 import instagram from "../../images/socialIcons/instagram.svg"
@@ -36,15 +35,11 @@ const LandingPage = () => {
           </div>
           <div className="mainContent">
             <h1>Hi!! I'm</h1>
-            <h3>
-              <ReactTypingEffect
-                speed={100}
-                eraseSpeed={100}
-                typingDelay={1000}
-                text="kishorekumar"
-              />
-            </h3>
+            <h3>kishorekumar</h3>
             <div className="subContents">
+              <p>
+                I'm a <span></span>
+              </p>
               <p>FrontEnd Developer</p>
               <p>Web Designer</p>
               <p>Student</p>

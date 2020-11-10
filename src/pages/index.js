@@ -1,15 +1,14 @@
 import React from "react"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-import styled from "styled-components"
-import LandingPage from "../sections/LandingSection/LandingPage"
 import ParticlesEffect from "../components/ParticlesEffect/particlesEffect"
+import LandingPage from "../sections/LandingSection/LandingPage"
 import AboutSection from "../sections/AboutSection/AboutSection"
 import SkillsSection from "../sections/SkillsSection/SkillsSection"
 import OtherSkillsSection from "../sections/OtherSkillsSection/OtherSkillsSection"
 import BlogsSection from "../sections/BlogsSection/BlogsSection"
+
+import styled from "styled-components"
 
 const Wrapper = styled.div`
   max-width: 1300px;

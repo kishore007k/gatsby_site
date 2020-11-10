@@ -14,15 +14,18 @@ const Header = () => {
     }
   `)
 
-  const [scroll, setScroll] = useState(false)
-  useEffect(() => {
-    window.addEventListener("scroll", () =>
-      window.pageYOffset > 150 ? setScroll(true) : setScroll(false)
-    )
-  }, [])
-
   const [active, setActive] = useState(false)
   const [Inactive, setInactive] = useState(true)
+  const [scroll, setScroll] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== `undefined`) {
+      window.addEventListener("scroll", () =>
+        window.pageYOffset > 150 ? setScroll(true) : setScroll(false)
+      )
+    }
+  }, [])
+
   const toggleActive = () => {
     if (active) {
       setActive(false)
@@ -32,6 +35,7 @@ const Header = () => {
       setInactive(false)
     }
   }
+
   return (
     <HeaderWrapper>
       <div className={`header ${scroll ? "scrolled" : ""}`}>
