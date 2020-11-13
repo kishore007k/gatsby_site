@@ -20,13 +20,13 @@ const SkillsSectionWrapper = styled.section`
     font-weight: 400;
   }
 
-  .skills {
+  .skill {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
   }
 
-  .imageContainer {
+  .imageContainers {
     display: flex;
     width: 100%;
     height: auto;

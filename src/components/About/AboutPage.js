@@ -2,6 +2,9 @@ import React from "react"
 import "react-vertical-timeline-component/style.min.css"
 import AboutPageWrapper from "./AboutPageWrapper.style"
 import TimeLineEffect from "./TimeLineEffect"
+import Skills from "./Skills"
+import SkillsSection from "../../sections/SkillsSection/SkillsSection"
+// Images Import
 import tree from "../../images/tree.png"
 import avatar from "../../images/me.jpeg"
 
@@ -45,7 +48,9 @@ const AboutPage = () => {
           />
         </div>
       </div>
+      <SkillsSection />
       <TimeLineEffect />
+      <Skills />
     </AboutPageWrapper>
   )
 }

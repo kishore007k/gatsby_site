@@ -121,6 +121,43 @@ const AboutPageWrapper = styled.section`
       margin: auto;
     }
   }
+
+  .skills {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .skillsTopic {
+    font-size: 25px;
+    font-weight: 300;
+  }
+
+  .imageContainer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 60px;
+      height: 60px;
+      margin-right: 60px;
+    }
+
+    h4 {
+      text-align: center;
+    }
+  }
+
+  .otherSkills {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 50px auto;
+  }
 `
 
 export default AboutPageWrapper

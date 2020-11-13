@@ -21,31 +21,31 @@ const SkillsSection = () => {
       <div className="mainContent">
         <div className="programingLanguages">
           <big className="question">What are all the languages I know?</big>
-          <div className="skills">
+          <div className="skill">
             <div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={python} alt="Python" />
                 <h4>Python</h4>
               </div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={javascript} alt="JavaScript" />
                 <h4>JavaScript</h4>
               </div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={markdown} alt="Markdown" />
                 <h4>MarkDown</h4>
               </div>
             </div>
             <div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={html} alt="HTML" />
                 <h4>HTML</h4>
               </div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={css} alt="CSS" />
                 <h4>CSS</h4>
               </div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={sass} alt="SASS/SCSS" />
                 <h4>SCSS/SASS</h4>
               </div>
@@ -56,31 +56,31 @@ const SkillsSection = () => {
           <big className="question">
             What frameworks & Static-Site generators I know?
           </big>
-          <div className="skills">
+          <div className="skill">
             <div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={reactLogo} alt="React JS" />
                 <h4>ReactJS</h4>
               </div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={vue} alt="Vue JS" />
                 <h4>VueJS</h4>
               </div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={gatsbyLogo} alt="Gatsby JS" />
                 <h4>GatsbyJS</h4>
               </div>
             </div>
             <div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={jekyll} alt="Jekyll" />
                 <h4>Jekyll</h4>
               </div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={graphQL} alt="GraphQL" />
                 <h4>GraphQL</h4>
               </div>
-              <div className="imageContainer">
+              <div className="imageContainers">
                 <img src={git} alt="Git" />
                 <h4>Git</h4>
               </div>

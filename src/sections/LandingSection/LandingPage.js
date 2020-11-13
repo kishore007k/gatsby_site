@@ -37,9 +37,6 @@ const LandingPage = () => {
             <h1>Hi!! I'm</h1>
             <h3>kishorekumar</h3>
             <div className="subContents">
-              <p>
-                I'm a <span></span>
-              </p>
               <p>FrontEnd Developer</p>
               <p>Web Designer</p>
               <p>Student</p>

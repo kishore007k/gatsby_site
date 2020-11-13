@@ -570,3 +570,12 @@ code {
   border: none;
   border-radius: 5px;
 }
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(27, 141, 135, 0.274);
+}
+::-webkit-scrollbar-thumb {
+  background-color: lightseagreen;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(13, 122, 117, 0.2);
+}

@@ -11,7 +11,7 @@ const ContactFormWrapper = styled.section`
     width: 100%;
     height: auto;
     background-color: aliceblue;
-    padding: 10px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -37,7 +37,7 @@ const ContactFormWrapper = styled.section`
   .formControl {
     display: flex;
     width: 100%;
-    padding: 10px;
+    padding: 10px 30px;
     margin-bottom: 30px;
     justify-content: center;
     align-items: center;
