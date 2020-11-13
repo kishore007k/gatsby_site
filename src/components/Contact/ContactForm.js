@@ -7,7 +7,7 @@ const contact = () => {
       <div className="contactPage">
         <article className="contactForm">
           <h3>Get In Touch</h3>
-          <form action="https://formspree.io/YOUR_ID" method="POST">
+          <form name="contact" method="POST" data-netlify="true">
             <div className="formGroup">
               <input
                 type="text"
@@ -28,7 +28,7 @@ const contact = () => {
                 className="formControl"
               ></textarea>
             </div>
-            <button type="submit" className="submitBtn btn">
+            <button type="submit" className="submitBtn">
               submit here
             </button>
           </form>

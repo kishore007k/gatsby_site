@@ -48,6 +48,30 @@ const ContactFormWrapper = styled.section`
     text-transform: uppercase;
     color: lightseagreen;
   }
+
+  .submitBtn {
+    display: block;
+    margin: auto;
+    width: fit-content;
+    height: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: aliceblue;
+    color: lightseagreen;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s ease-in all;
+
+    &:hover {
+      color: aliceblue;
+      background-color: lightseagreen;
+      box-shadow: 0px 5px 10px lightseagreen;
+    }
+  }
 `
 
 export default ContactFormWrapper

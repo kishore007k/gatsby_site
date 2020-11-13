@@ -7,7 +7,7 @@ import styled from "styled-components"
 
 const H1 = styled.h1`
   text-align: center;
-  margin-top: 200px;
+  margin-top: 175px;
   color: lightseagreen;
 `
 
