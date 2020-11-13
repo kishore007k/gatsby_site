@@ -6,7 +6,10 @@ import BlogPageWrapper from "./BlogsWrapper.style"
 
 export const query = graphql`
   query AllBlogPostsQuery {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(
+      filter: { fields: { collection: { eq: "posts" } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       nodes {
         id
         slug

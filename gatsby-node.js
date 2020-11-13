@@ -2,22 +2,31 @@ const { createFilePath } = require("gatsby-source-filesystem")
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-
-  // you only want to operate on `Mdx` nodes. If you had content from a
-  // remote CMS you could also check to see if the parent node was a
-  // `File` node here
   if (node.internal.type === "Mdx") {
     const value = createFilePath({ node, getNode })
 
+    const collection = getNode(node.parent).sourceInstanceName
+
+    let slug = ""
+
+    if (collection === `posts`) {
+      slug = `/blogs${value}`
+    } else if (collection === `projects`) {
+      slug = `/projects/${value}`
+    } else {
+      slug = `/${collection}/${value}`
+    }
+
     createNodeField({
-      // Name of the field you are adding
-      name: "slug",
-      // Individual MDX node
+      name: "collection",
       node,
-      // Generated value based on filepath with "blog" prefix. you
-      // don't need a separating "/" before the value because
-      // createFilePath returns a path with the leading "/".
-      value: `/blogs${value}`,
+      value: collection,
+    })
+
+    createNodeField({
+      name: `slug`,
+      node,
+      value: slug,
     })
   }
 }
@@ -26,10 +35,26 @@ const path = require("path")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   // Destructure the createPage function from the actions object
+  const blogPost = path.resolve(`src/templates/singleBlog.js`)
+  const ProjectPost = path.resolve(`src/templates/singleProject.js`)
+
   const { createPage } = actions
   const result = await graphql(`
-    query {
-      allMdx {
+    {
+      allBlogs: allMdx(filter: { fields: { collection: { eq: "posts" } } }) {
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+          }
+        }
+      }
+
+      allProjects: allMdx(
+        filter: { fields: { collection: { eq: "projects" } } }
+      ) {
         edges {
           node {
             id
@@ -45,9 +70,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
-  const blogPost = path.resolve(`src/templates/singleBlog.js`)
   // Create blog post pages.
-  const posts = result.data.allMdx.edges
+  const posts = result.data.allBlogs.edges
+  const projects = result.data.allProjects.edges
   // you'll call `createPage` for each result
   posts.forEach(({ node }) => {
     createPage({
@@ -58,6 +83,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: blogPost,
       // You can use the values in this context in
       // our page layout component
+      context: { id: node.id },
+    })
+  })
+
+  projects.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: ProjectPost,
       context: { id: node.id },
     })
   })

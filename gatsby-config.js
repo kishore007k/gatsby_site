@@ -9,6 +9,7 @@ module.exports = {
     author: `kishore007k`,
     image: `src/images/logo.png`,
     gitHub: `https://github.com/kishore007k/`,
+    siteURL: `https://kishore.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,6 +34,19 @@ module.exports = {
       resolve: "gatsby-plugin-page-creator",
       options: {
         path: `${__dirname}/src/collection/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/collection/projects/`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/collection/projects`,
       },
     },
     {
