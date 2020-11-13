@@ -13,7 +13,7 @@ const H1 = styled.h1`
 
 const Wrapper = styled.div`
   max-width: 1300px;
-  height: 53.5vh;
+  height: 100%;
   margin: auto;
 `
 

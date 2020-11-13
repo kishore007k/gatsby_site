@@ -1,51 +1,41 @@
 import React from "react"
 import ContactFormWrapper from "./ContactForm.style"
 
-const ContactForm = () => {
+const contact = () => {
   return (
     <ContactFormWrapper>
-      <form
-        name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <div className="name">
-          <p>
-            <label htmlFor="firstName">
-              First Name:
-              <input type="text" name="firstName" placeholder="First Name" />
-            </label>
-          </p>
-          <p>
-            <label htmlFor="lastName">
-              Last Name:
-              <input type="text" name="lastName" placeholder="Last Name" />
-            </label>
-          </p>
-        </div>
-        <div>
-          <p className="email">
-            <label htmlFor="email">
-              Email:
-              <input type="email" name="email" placeholder="Email" />
-            </label>
-          </p>
-          <p>
-            <label htmlFor="message">Message: </label>
-          </p>
-          <textarea
-            name="message"
-            cols="50"
-            rows="5"
-            placeholder="Write something...."
-          ></textarea>
-        </div>
-        <button className="sendBtn">Send</button>
-      </form>
+      <div className="contactPage">
+        <article className="contactForm">
+          <h3>Get In Touch</h3>
+          <form action="https://formspree.io/YOUR_ID" method="POST">
+            <div className="formGroup">
+              <input
+                type="text"
+                name="name"
+                placeholder="name"
+                className="formControl"
+              />
+              <input
+                type="email"
+                placeholder="email"
+                name="email"
+                className="formControl"
+              />
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="message"
+                className="formControl"
+              ></textarea>
+            </div>
+            <button type="submit" className="submitBtn btn">
+              submit here
+            </button>
+          </form>
+        </article>
+      </div>
     </ContactFormWrapper>
   )
 }
 
-export default ContactForm
+export default contact

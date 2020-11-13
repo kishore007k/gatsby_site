@@ -4,10 +4,11 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Portfolio Site`,
+    title: `Kishore's Portfolio Site`,
     description: `This is a portfolio site made by Kishore`,
     author: `kishore007k`,
     image: `src/images/logo.png`,
+    gitHub: `https://github.com/kishore007k/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -51,17 +52,6 @@ module.exports = {
       options: {
         fonts: [`roboto mono`, `muli\:400,400i,700,700i`],
         display: "swap",
-      },
-    },
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: `GitHub`,
-        fieldName: `github`,
-        url: `https://api.github.com/graphql`,
-        headers: {
-          Authorization: `Bearer 7cd6c085f36e1cd42c7cb19fc9d9b306dccb21cf`,
-        },
       },
     },
   ],

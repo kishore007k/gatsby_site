@@ -5,10 +5,7 @@ import TimeLineEffect from "./TimeLineEffect"
 import tree from "../../images/tree.png"
 import avatar from "../../images/me.jpeg"
 
-const AboutPage = ({ data }) => {
-  const {
-    github: { viewer },
-  } = data
+const AboutPage = () => {
   return (
     <AboutPageWrapper>
       <div>
@@ -41,36 +38,14 @@ const AboutPage = ({ data }) => {
             and some other popular open ground challenges. I often write some
             articles in the <a href="https://dev.to/kishore007k">Dev.io</a>
           </p>
+          <img
+            src="https://grass-graph.moshimo.works/images/kishore007k.png?background=none"
+            alt="GitHub Contribution Graph"
+            className="image"
+          />
         </div>
       </div>
       <TimeLineEffect />
-      <div className="githubContainer">
-        <div className="github">
-          <div className="githubImage">
-            <img src={viewer.avatarUrl} alt={viewer.name} />
-          </div>
-          <div className="githubDetails">
-            <div className="githubBio">
-              <p>{viewer.bio}</p>
-            </div>
-            <div className="githubDesc">
-              <div>
-                <p>Followers: {viewer.followers.totalCount}</p>
-                <p>Following: {viewer.following.totalCount}</p>
-              </div>
-              <div>
-                <p>Gists: {viewer.gists.totalCount}</p>
-                <p>Repositories: {viewer.repositories.totalCount}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img
-          src="https://grass-graph.moshimo.works/images/kishore007k.png?background=none"
-          alt="GitHub Contribution Graph"
-          className="image"
-        />
-      </div>
     </AboutPageWrapper>
   )
 }

@@ -8,8 +8,6 @@ const RotationAnimation = keyframes`
 const FooterWrapper = styled.footer`
   display: block;
   position: relative;
-  bottom: 0;
-  right: 0;
   height: max-content;
   width: 100%;
   background-color: #f7fdff;
