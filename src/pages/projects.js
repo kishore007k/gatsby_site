@@ -13,6 +13,7 @@ const query = graphql`
       nodes {
         id
         slug
+        body
         frontmatter {
           category
           date
@@ -22,11 +23,7 @@ const query = graphql`
           siteLink
           title
           thumbnail {
-            childImageSharp {
-              fluid(maxWidth: 1000) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+            publicURL
           }
         }
       }

@@ -7,6 +7,8 @@ import AboutSection from "../sections/AboutSection/AboutSection"
 import SkillsSection from "../sections/SkillsSection/SkillsSection"
 import OtherSkillsSection from "../sections/OtherSkillsSection/OtherSkillsSection"
 import BlogsSection from "../sections/BlogsSection/BlogsSection"
+import ProjectsSection from "../sections/ProjectsSection/ProjectsSection"
+import ContactSection from "../sections/ContactSection/ContactSection"
 
 import styled from "styled-components"
 
@@ -36,6 +38,8 @@ const IndexPage = () => (
       <SkillsSection />
       <OtherSkillsSection />
       <BlogsSection />
+      <ProjectsSection />
+      <ContactSection />
     </Wrapper>
   </Layout>
 )

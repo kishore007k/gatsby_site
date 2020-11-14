@@ -6,9 +6,12 @@ const SingleProject = ({ data }) => {
     mdx: { body, frontmatter },
   } = data
 
+  console.log(frontmatter)
+
   return (
     <SingleProjectWrapper>
       This is where all single projects will display
+      <div>{body}</div>
     </SingleProjectWrapper>
   )
 }
