@@ -2,6 +2,8 @@ import React from "react"
 import ProjectsSectionWrapper from "./ProjectsSectionWrapper.style"
 import Image from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import { AiFillGithub } from "react-icons/ai"
+import { FiExternalLink } from "react-icons/fi"
 
 const ProjectsSection = () => {
   const data = useStaticQuery(graphql`
@@ -70,8 +72,30 @@ const ProjectsSection = () => {
                   <div className="cardDesc">
                     <p>{project.frontmatter.description}</p>
                   </div>
-                  <div className="readme">
-                    <Link to={`/projects/${project.slug}`}>Read More</Link>
+                  <div className="btn">
+                    <div className="linksBtn">
+                      <button className="linkBtn">
+                        <a
+                          href={project.frontmatter.githubLink}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <AiFillGithub />
+                        </a>
+                      </button>
+                      <button className="linkBtn">
+                        <a
+                          href={project.frontmatter.siteLink}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FiExternalLink />
+                        </a>
+                      </button>
+                    </div>
+                    <div className="readme">
+                      <Link to={`/projects/${project.slug}`}>Read More</Link>
+                    </div>
                   </div>
                 </div>
               </div>

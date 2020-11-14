@@ -156,7 +156,7 @@ const AboutPageWrapper = styled.section`
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    margin: 50px auto;
+    margin: 50px auto 160px auto;
   }
 `
 

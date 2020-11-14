@@ -126,6 +126,47 @@ const ProjectsSectionWrapper = styled.section`
     }
   }
 
+  .btn {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+
+  .linksBtn {
+    display: flex;
+    width: auto;
+    height: inherit;
+    justify-content: space-evenly;
+  }
+
+  .linkBtn {
+    display: block;
+    padding: 10px;
+    font-size: 30px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: 0.5s ease-in all;
+    margin-right: 10px;
+
+    a {
+      text-decoration: none;
+      color: darkturquoise;
+      transition: 0.5s ease-in all;
+    }
+
+    &:hover {
+      background-color: darkturquoise;
+      border-radius: 50%;
+
+      a {
+        color: aliceblue;
+      }
+    }
+  }
+
   @media (max-width: 960px) {
     .cardContainer {
       margin: 40px 60px;

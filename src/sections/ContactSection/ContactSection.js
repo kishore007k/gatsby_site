@@ -4,6 +4,9 @@ import ContactSectionWrapper from "./ContactSectionWrapper.style"
 const ContactSection = () => {
   return (
     <ContactSectionWrapper>
+      <div>
+        <h1 className="title">Contact Me!</h1>
+      </div>
       <div className="contactPage">
         <article className="contactForm">
           <h3>Get In Touch</h3>

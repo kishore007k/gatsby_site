@@ -8,13 +8,15 @@ import styled from "styled-components"
 import Footer from "./Footer/footer"
 
 const Wrapper = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: #f0fcff;
 
   main {
     display: block;
-    height: auto;
+    min-height: 100vh;
+    position: relative;
     width: 100%;
     margin: auto;
     overflow: hidden;

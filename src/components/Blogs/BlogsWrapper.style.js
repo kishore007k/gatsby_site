@@ -1,6 +1,8 @@
 import styled from "styled-components"
 
 const BlogPageWrapper = styled.section`
+  margin-bottom: 200px;
+
   .sectionTitle {
     text-align: center;
     margin-top: 200px;

@@ -3,8 +3,15 @@ import styled from "styled-components"
 const ContactSectionWrapper = styled.section`
   display: block;
   max-width: 700px;
-  margin: 0px auto 50px auto;
+  margin: 0px auto 200px auto;
   height: 100%;
+
+  .title {
+    color: lightseagreen;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
 
   .contactPage {
     display: block;
