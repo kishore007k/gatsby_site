@@ -14,6 +14,7 @@ export const pageQuery = graphql`
     mdx(id: { eq: $id }, fields: { collection: { eq: "projects" } }) {
       id
       slug
+      body
       frontmatter {
         category
         date

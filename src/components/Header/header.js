@@ -1,19 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "../image"
 import HeaderWrapper from "./header.style"
 import { AiOutlineMenuFold, AiOutlineClose } from "react-icons/ai"
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "logo.svg" }) {
-        publicURL
-      }
-    }
-  `)
-
   const [active, setActive] = useState(false)
   const [Inactive, setInactive] = useState(true)
   const [scroll, setScroll] = useState(false)
@@ -42,9 +32,7 @@ const Header = () => {
         <div className="container">
           <div>
             <h1 className={`logo ${scroll ? "afterScroll" : ""}`}>
-              <Link to="/">
-                <Image fluid={data.file.publicURL} />
-              </Link>
+              <Link to="/">kishorekumar</Link>
             </h1>
           </div>
           <div>
