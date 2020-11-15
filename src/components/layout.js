@@ -1,11 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./Header/header"
 import "./layout.css"
-
 import styled from "styled-components"
 import Footer from "./Footer/footer"
+import favicon from "../images/favicon.ico"
+import Helmet from "react-helmet"
 
 const Wrapper = styled.div`
   position: relative;
@@ -37,6 +37,9 @@ const Layout = ({ children }) => {
 
   return (
     <Wrapper>
+      <Helmet>
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
         <main>{children}</main>
