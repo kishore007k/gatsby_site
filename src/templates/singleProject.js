@@ -16,20 +16,9 @@ export const pageQuery = graphql`
       slug
       body
       frontmatter {
-        category
-        date
-        description
-        flags
         githubLink
         siteLink
         title
-        thumbnail {
-          childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }

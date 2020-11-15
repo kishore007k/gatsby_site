@@ -5,7 +5,6 @@ import { AiFillGithub } from "react-icons/ai"
 import { FiExternalLink } from "react-icons/fi"
 
 const ProjectsPage = ({ data }) => {
-  console.log(data)
   return (
     <ProjectsPageWrapper>
       <div>
@@ -15,9 +14,9 @@ const ProjectsPage = ({ data }) => {
         <div className="cardContainer">
           {data.allMdx.nodes.map(project => {
             return (
-              <div>
+              <div key={project.id}>
                 <SEO title={project.slug} />
-                <div key={project.id} className="card">
+                <div className="card">
                   <div>
                     <h3 className="title">{project.frontmatter.title}</h3>
                   </div>
@@ -54,12 +53,20 @@ const ProjectsPage = ({ data }) => {
                   <div className="linkAndReadme">
                     <div className="links">
                       <button className="githubBtn">
-                        <a href={project.frontmatter.githubLink}>
+                        <a
+                          href={project.frontmatter.githubLink}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <AiFillGithub />
                         </a>
                       </button>
                       <button className="externalBtn">
-                        <a href={project.frontmatter.siteLink}>
+                        <a
+                          href={project.frontmatter.siteLink}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <FiExternalLink />
                         </a>
                       </button>

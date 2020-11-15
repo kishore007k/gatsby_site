@@ -13,7 +13,6 @@ const query = graphql`
       nodes {
         id
         slug
-        body
         frontmatter {
           category
           date

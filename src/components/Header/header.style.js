@@ -33,7 +33,7 @@ const HeaderWrapper = styled.header`
       font-size: 20px;
       font-weight: 500;
       text-decoration: none;
-      color: aliceblue;
+      color: #62c9c3;
       text-transform: uppercase;
     }
   }

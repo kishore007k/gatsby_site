@@ -12,9 +12,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (collection === `posts`) {
       slug = `/blogs${value}`
     } else if (collection === `projects`) {
-      slug = `/projects/${value}`
+      slug = `/projects${value}`
     } else {
-      slug = `/${collection}/${value}`
+      slug = `/${collection}${value}`
     }
 
     createNodeField({
