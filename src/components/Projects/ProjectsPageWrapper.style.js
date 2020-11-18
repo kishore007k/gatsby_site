@@ -20,6 +20,8 @@ const ProjectsPageWrapper = styled.section`
     grid-template-rows: 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    width: 100%;
+    margin: 40px auto;
   }
 
   .card {
@@ -31,6 +33,7 @@ const ProjectsPageWrapper = styled.section`
     padding: 10px;
     background-color: aliceblue;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.5s ease-in-out all;
   }
 
   .title {
@@ -72,6 +75,7 @@ const ProjectsPageWrapper = styled.section`
 
   .flags {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: auto;
     justify-content: space-evenly;
@@ -158,9 +162,23 @@ const ProjectsPageWrapper = styled.section`
   @media (max-width: 1200px) {
     margin: 100px auto 200px auto;
 
+    .cards {
+      margin-right: 20px;
+    }
+
     .cardContainer {
       grid-template-columns: 1fr;
       margin: 40px 20px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .cardContainer {
+      margin: auto;
+    }
+
+    .cards {
+      margin: auto 10px;
     }
   }
 `
