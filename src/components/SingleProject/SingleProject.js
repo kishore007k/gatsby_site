@@ -10,7 +10,7 @@ import { FiExternalLink } from "react-icons/fi"
 const SingleProject = ({ data }) => {
   const { mdx } = data
 
-  const shortcodes = { Link }
+  const shortCodes = { Link }
 
   return (
     <SingleProjectWrapper>
@@ -21,7 +21,7 @@ const SingleProject = ({ data }) => {
         </div>
       </div>
       <div className="content">
-        <MDXProvider components={shortcodes}>
+        <MDXProvider components={shortCodes}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
       </div>

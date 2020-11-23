@@ -1,6 +1,5 @@
 import React from "react"
 import ProjectsPageWrapper from "./ProjectsPageWrapper.style"
-import SEO from "../seo"
 import { AiFillGithub } from "react-icons/ai"
 import { FiExternalLink } from "react-icons/fi"
 
@@ -15,7 +14,6 @@ const ProjectsPage = ({ data }) => {
           {data.allMdx.nodes.map(project => {
             return (
               <div key={project.id} className="cards">
-                <SEO title={project.slug} />
                 <div className="card">
                   <div>
                     <h3 className="title">{project.frontmatter.title}</h3>
